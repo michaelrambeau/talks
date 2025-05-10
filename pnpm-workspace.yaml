@@ -1,0 +1,6 @@
+packages:
+  - "2025/*"
+catalog:
+  "@slidev/cli": ^51.1.2
+  "@slidev/client": ^51.1.2
+  "@slidev/theme-default": ^0.25.0

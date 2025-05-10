@@ -1,0 +1,17 @@
+{
+  "name": "michael-talks",
+  "version": "0.0.1",
+  "description": "Presentations by Michael Rambeau",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm -r run build"
+  },
+  "devDependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/client": "latest",
+    "@slidev/theme-default": "^0.25.0"
+  },
+  "keywords": [],
+  "author": "Michael Rambeau",
+  "license": "MIT"
+}
