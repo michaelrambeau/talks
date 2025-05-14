@@ -1,5 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "dist"
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/2025/sst/:path*",
+      "destination": "/2025/sst/index.html"
+    },
+    {
+      "source": "/2025/jsnation/:path*",
+      "destination": "/2025/jsnation/index.html"
+    }
+  ]
 }
