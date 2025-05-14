@@ -22,29 +22,35 @@ A presentation by Michael Rambeau
 
 ## Context
 
-- We are building Calliope, a web application (SPA) connected to a REST API.
-- 50 end-points: GET (26), POST (22) & PUT (2)
-- Most of the backend logic is in the monorepo `cci-calliope` that combines the React SPA and the API (100% TypeScript) 
-- Also: multiple services from other repos `cci-*` (Python)
+We are building Calliope, a web application (SPA) connected to a REST API.
+
+50 end-points: GET (26), POST (22) & PUT (2)
+
+Most of the backend logic is in the monorepo `cci-calliope` that combines the React SPA and the API (100% TypeScript) 
+
+Also: multiple services from other repos `cci-*` (Python)
 
 ---
 
-## What we use currently: [serverless](https://www.serverless.com/) 3
+## What we use currently: [serverless](https://www.serverless.com/) Framework 3
 
 ![Serverless Logo](https://cdn.prod.website-files.com/60acbb950c4d6606963e1fed/60acbb950c4d66854e3e2013_logo%20serverless%20dark.svg)
 
-- An open-source CLI tool to build, configure, and deploy serverless applications.
-- Can be used for:
-   - APIs end-point (AWS Lambda functions + API ApiGatewayV2)
-   - CRON jobs
-   - ...
-- Written in JS but can handle TypeScript (via esbuild plugin) and Python code
+An open-source CLI tool to build, configure, and deploy serverless applications.
+
+Can be used for:
+
+- APIs end-point (AWS Lambda functions + API ApiGatewayV2)
+- CRON jobs
+- ...
+
+Written in JS but can handle TypeScript (via esbuild plugin) and Python code
 
 ---
 
 ## How it looks like
 
-### Configuration with yml files
+Configuration with yml files
 
 - `serverless.yml` describes the application configuration, sets up the environment variables
 - `function.yml` describes all AWS Lambda functions: handlers + events that trigger the functions
@@ -57,8 +63,20 @@ A presentation by Michael Rambeau
 
 ### Deployment
 
-- Deployment from the command line targeting stage:  `serverless deploy --stage production`
-- Can be used to deploy a single function (`--function myFunction`): useful when developing because there is no "local" mode
+Deployment from the command line targeting a **stage**:
+
+```sh
+serverless deploy --stage production
+```
+
+Every function is bundled, zipped and uploaded to AWS Lambda
+
+Can be used to deploy a single function useful when developing and testing functions in the cloud because there is no "local" mode
+
+
+```sh
+serverless deploy --stage production --function myFunction
+```
 
 ---
 
@@ -110,18 +128,21 @@ The serverless business model has changed!
 
 ### Other issues
 
-- Poor DX (improved with serverless 4)
-- Tedious setup with yml files (no guards against typos)
-- Lack of type safety in the IDE
+Poor DX (improved with serverless 4)
+
+Tedious setup with yml files (no guards against typos)
+
+Lack of support (type inference) in the IDE
 
 ---
 
 ## Options to move away?
 
-- Get a license and upgrade to serverless 4 (serverless 4 looks good: better DX and TS support)
-- Migrate to something else:
+Get a license and upgrade to serverless 4? (which looks good: better DX and TS support)
+
+Migrate to something else?
   - Open source fork of serverless: https://github.com/oss-serverless/serverless
-  - CDK
+  - AWS CDK
   - SST
   - any one aware of other options?
 
@@ -129,11 +150,11 @@ The serverless business model has changed!
 
 ## Doing nothing is not really an option
 
-- Tech debt!
-  - Node.js version already out-of-date (v20)
-  - Domino effects when being stuck to old packages 
-- Vulnerabilities
-- Support / Documentation
+Tech debt! (Node.js version, dependencies)
+
+Vulnerabilities
+
+Support / Documentation
 
 ---
 
@@ -143,7 +164,7 @@ The serverless business model has changed!
 
 A nice abstraction on top of AWS
 
-Provides +150 providers
+Provides +150 components:
 
 - Low level AWS resources (functions, queues, databases)
 - Higher level frameworks
@@ -220,15 +241,51 @@ Docs: https://sst.dev/docs/console/
 
 ## History / Numbers
 
-- Created 5 years ago
-- 200 contributors, 3,400 commits
-- Built on top of Pulumi since [v3 release](https://sst.dev/blog/sst-v3), released in August 2024, instead of AWS CDK
-- Led by [Dax Raad](https://twitter.com/thdxr), known for his work on Local First web apps
-- Major milestones:
-  - v1: Initial release with AWS CDK
-  - v2: Improved DX and TypeScript support
-  - v3: Switched to Pulumi, better multi-cloud support
-- Growing community with 23K+ GitHub stars
+Created in 2020
+
+200 contributors, 3,400 commits
+
+Built on top of Pulumi since [v3 release](https://sst.dev/blog/sst-v3), released in August 2024, instead of AWS CDK
+
+Led by [Dax Raad](https://twitter.com/thdxr), known for his work on Local First web apps
+
+Major milestones:
+
+- v1: Initial release with AWS CDK
+- v2: Improved DX and TypeScript support
+- v3: Switched to Pulumi and Terraform, better multi-cloud support
+
+Growing community with 23K+ GitHub stars
+
+---
+
+## Actively maintained!
+
+[Latest tweet about OpenSearch](https://x.com/jayair/status/1922049110397387199)
+
+<Tweet id="1922049110397387199" />
+
+
+> The new `OpenSearch` component lets you add a new instance of OpenSearch to your app.
+
+> We had gotten a few requests for this one.
+
+> It also supports:
+
+> - Sharing an instance across stages
+> - Optionally connecting to a local instance in `sst dev`
+
+---
+
+## Real world examples
+
+
+| Project | Description | Link
+| --- | --- | --- |
+| [tldraw](https://github.com/tldraw/tldraw) | A collaborative drawing and diagramming tool | [SST Config](https://github.com/tldraw/tldraw/blob/main/sst.config.ts)
+| [Nestri](https://github.com/nestrilabs/nestri) | A self-hosted cloud gaming solution for your home server (Geforce Now alternative) | [SST Config](https://github.com/nestrilabs/nestri/blob/main/sst.config.ts)
+
+
 
 ---
 
@@ -261,11 +318,15 @@ Docs: [Configure a Router](https://sst.dev/docs/configure-a-router/)
 
 ## Summarizing the benefits
 
-- IaC (Infrastructure as Code)
-- Type safety in the editor
-- Excellent developer experience
-- Not tied to AWS (you can deploy to Cloudflare too)
-- Full-stack capabilities
+IaC (Infrastructure as Code)
+
+Type safety
+
+Excellent developer experience
+
+Not tied to AWS (you can deploy to Cloudflare too)
+
+Full-stack capabilities
 
 ---
 
@@ -296,6 +357,8 @@ To showcase:
 - Async nature
 - Type Safety
 
+---
+layout: center
 ---
 
 ## Thank you!
