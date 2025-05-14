@@ -1,0 +1,10 @@
+{
+  "name": "jsnation",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --base /2025/jsnation/ --out ../../dist/2025/jsnation",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  }
+}
