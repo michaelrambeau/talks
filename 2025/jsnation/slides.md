@@ -8,9 +8,9 @@ transition: slide-left
 
 <div class="w-full flex justify-center">
   <div class="flex flex-row items-center gap-8">
-      <img src="https://bestofjs.org/logo.png" height="112" width="200" class="bestofjs" />
+      <img src="/img/bestofjs.svg" height="200" width="200" class="bestofjs" />
       <div class="text-8xl">×</div>
-      <img src="/img/jsnation.svg" height="112" width="400" class="jsnation" />
+      <img src="/img/jsnation.svg" height="112" width="284.44" class="jsnation" />
   </div>
 </div>
 
@@ -18,14 +18,14 @@ transition: slide-left
 
 ##### 2015-2025, celebrating 10 years of [Best of JS](https://bestofjs.org/) at [JSNation](https://jsnation.com)!
 
-A presentation by Michael Rambeau, creator of [Best of JS](https://bestofjs.org)
+A presentation by Michael Rambeau
 
 </div>
 
 <style>
     img {
-        height: inherit;
-        display:block;
+      height: inherit;
+      display:block;
     }
     .bestofjs {
         width: 200px;
@@ -35,8 +35,6 @@ A presentation by Michael Rambeau, creator of [Best of JS](https://bestofjs.org)
     .jsnation {
       width: 284.44px;
       height: 112px;
-      /* position: relative; */
-      /* left: -4rem; */
     }
 </style>
 
@@ -50,7 +48,7 @@ hideInToc: true
 src: ./pages/js-evolution.md
 ---
 
-(Evolution of JS loaded gere)
+(Evolution of JS loaded here)
 
 ---
 src: ./pages/bestofjs.md
@@ -68,11 +66,19 @@ src: ./pages/trends.md
 hideInToc: true
 ---
 
-# Conclusion
+## Conclusion
 
-In 2015, I was building an SPAs with React, Redux, Webpack, Babel and a CSS processor called Stylus.
-In 2025 I use Next.js with React Server components, shadcn/ui and TailwindCSS.
+In 2015, I was building SPAs with:
+- React + Redux
+- Webpack + Babel
+- Stylus CSS
 
-New solutions and patterns lead to new problems!
+In 2025, I use:
+- Next.js with React Server Components
+- shadcn/ui + TailwindCSS
+- TypeScript everywhere
 
-The landscape keeps changing... 10 years later, [Best of JS](https://bestofjs.org) is needed more than ever!
+
+[Best of JS](https://bestofjs.org) is still here to help you navigate this ever-changing landscape!
+
+
