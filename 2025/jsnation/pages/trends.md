@@ -7,11 +7,11 @@ layout: center
 
 ---
 
+## TypeScript
+
 <div class="flex flex-grow gap-8">
 
   <div>
-
-  ## TypeScript
 
   10 years ago...
 
@@ -125,11 +125,12 @@ Benefits:
 
 ---
 
+## TailwindCSS
+
 <div class="flex gap-8">
 
   <div class="flex-grow">
 
-  ## TailwindCSS
 
   Atomic CSS approach:
 
@@ -190,11 +191,12 @@ The lesson: sometimes it's not the best concept that wins, but rather the best e
 
 ---
 
+## shadcn/ui components
+
 <div class="flex gap-8">
 
 <div class="flex-grow">
 
-### shadcn/ui components
 
 The hottest project in 2023 and 2024!
 
