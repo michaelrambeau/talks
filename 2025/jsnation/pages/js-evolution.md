@@ -51,10 +51,15 @@ Popular libraries:
 - [YUI](https://yuilibrary.com/)
 
 <div class="flex items items-center gap-4">
+
 ![prototype](http://prototypejs.org/images/header-logo.png)
+
 ![scriptaculous](https://duckduckgo.com/i/f30e7f53.png)
+
 ![yui](https://duckduckgo.com/i/068ede8a.jpg)
+
 ![Mootools](https://duckduckgo.com/i/e241bfd9.png)
+
 </div>
 
 ---
@@ -95,13 +100,21 @@ Rich tooling ecosystem:
 - Testing: Mocha, Jest
 
 <div class="flex gap-4 items-center">
+
 ![logo](https://bestofjs.org/logos/coffeescript.dark.svg)
+
 ![logo](https://bestofjs.org/logos/gulp.dark.svg)
+
 ![logo](https://bestofjs.org/logos/babel.dark.svg)
+
 ![logo](https://bestofjs.org/logos/eslint.dark.svg)
+
 ![logo](https://bestofjs.org/logos/webpack.dark.svg)
+
 ![logo](https://bestofjs.org/logos/mocha.dark.svg)
+
 ![logo](https://bestofjs.org/logos/jest.dark.svg)
+
 </div>
 
 <style>
