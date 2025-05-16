@@ -6,8 +6,10 @@ layout: center
 # Part 2: The Best of JS Story
 
 ---
+layout: two-cols
+---
 
-## What is Best of JS?
+## What is [Best of JS](https://bestofjs.org)?
 
 A curated directory of popular JavaScript projects
 
@@ -16,6 +18,10 @@ Helps developers:
 - Track project growth
 - Find projects by category
 - Quick lookup of project links and resources
+
+::right::
+
+<img src="/img/screenshot-bestofjs-home.png"/>
 
 ---
 
@@ -47,8 +53,10 @@ Process:
 - Compute trends (daily/weekly/monthly)
 
 ---
+layout: two-cols
+---
 
-## The Sister Project: JS Rising Stars
+## [JS Rising Stars](https://risingstars.js.org/)
 
 Annual rankings since 2017
 
@@ -62,12 +70,22 @@ Features guest writers:
 
 Started with Gatsby, now on [Astro](https://astro.build/)
 
+::right::
+
+<img src="/img/screenshot-risingstars.png"/>
+
+---
+layout: fact
 ---
 
 ## Best of JS by the Numbers
 
-- First commit: May 2015
-- 3,000+ projects tracked
-- 2,200 active projects
-- 9 Rising Stars editions
-- 245 project tags
+First commit: May 2015
+
+3,000+ projects tracked
+
+2,200 active projects
+
+9 Rising Stars editions
+
+245 project tags

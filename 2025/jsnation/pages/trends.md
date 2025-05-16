@@ -132,15 +132,18 @@ Benefits:
   ## TailwindCSS
 
   Atomic CSS approach:
+
+  - Write styles directly in HTML
   - No CSS files to maintain
   - Consistent design system
   - Great DX with autocomplete
   - Build-time optimization
 
-  The "utility-first" revolution:
-  - Write styles directly in HTML
-  - Reuse knowledge across projects
+  Why TailwindCSS became a standard:
+
+  - Great docs
   - Scale from small to large apps
+  - Reuse knowledge across projects
   - Active community & ecosystem
 
   </div>
@@ -161,18 +164,28 @@ Benefits:
 
 ---
 
-#### TailwindCSS love/hate relation
+#### The TailwindCSS Love/Hate Relationship
 
-It's still feels weird to rely on the concatenation of strings inside class names!
+It still feels strange to rely on string concatenation within class names!
 
-Great alternatives, providing type safety and running at build time:
+```html
+<Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:size-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:size-5">
+  {children}
+</Command>
+```
+
+---
+
+### Great alternatives
+
+Type safety + build-time processing
 
 | 2021 | ![logo](https://bestofjs.org/logos/unocss.dark.svg) | [UnoCSS](https://unocss.dev/) from Anthony Fu |
 | --- | --- | --- |
 | 2022 | ![logo](https://bestofjs.org/logos/stylex.dark.svg) | [Stylex](https://emotion.sh/) from Meta |
 | 2022 | ![logo](https://bestofjs.org/logos/panda.dark.svg) | [Panda](https://panda-css.com/) from ChakraUI Team |
 
-The lesson: sometimes it's not the best concept that wins, it's the best execution (ecosystem, docs, buzz on social medias...)
+The lesson: sometimes it's not the best concept that wins, but rather the best execution (ecosystem, documentation, and social media presence).
 
 
 ---
